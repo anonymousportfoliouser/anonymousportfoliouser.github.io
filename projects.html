@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Projects — Joseph George</title>
+    <title>Projects</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous"
         referrerpolicy="no-referrer">
 </head>
@@ -17,13 +16,7 @@
 <header>
     <div class="nav">
         <div class="nav-left">
-            <a href="index.html" class="site-title">Joseph George</a>
-
-            <a href="https://github.com/josephageorge"
-               target="_blank" rel="noopener noreferrer"
-               class="nav-icon" aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
-            </a>
+            <a href="index.html" class="site-title">Portfolio</a>
         </div>
 
         <div class="nav-links">
@@ -36,142 +29,125 @@
 <div class="container">
     <h2>Projects and Writing</h2>
 
+    <p style="margin-bottom:30px; font-size:0.95rem; color:#666;">
+        External links, identifying references, and publication attributions have been removed.
+        Several of the models described below are actively used in public-facing environments,
+        and this page reflects a generalized technical overview without direct identifiers.
+    </p>
+
     <!-- ================= Models & Tools ================= -->
 
     <h3>Selected Projects:</h3>
     <div class="projects-grid">
 
         <!-- PRISM -->
-        <a href="https://thezonemaster.substack.com/"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/prism_thumb.jpg" alt="PRISM Prospect Model" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">PRISM: Prospect Role Identification & Scouting Model</div>
-                    <div class="project-subtitle">Basketball Analytics · Multi-Stage Predictive Architecture</div>
-                </div>
-                <div class="project-hover">
-                    Multi-stage draft projection system trained on rolling historical cohorts to predict
-                    5-year NBA EPM and rotation probability. Integrates role-aware feature engineering,
-                    play-type efficiency splits, contextual production normalization, cross-era percentile
-                    scaling, and stability-adjusted priors. Employs pairwise gradient boosting for relative
-                    ranking calibration and leakage-controlled training windows to preserve forward validity.
-                    Designed to identify structural mispricings between consensus evaluation and long-term impact.
-                </div>
+        <div class="project-card">
+            <img src="img/prism_thumb.jpg" alt="PRISM Prospect Model" class="project-thumb">
+            <div class="project-info">
+                <div class="project-title">PRISM: Prospect Role Identification & Scouting Model</div>
+                <div class="project-subtitle">Basketball Analytics · Multi-Stage Predictive Architecture</div>
             </div>
-        </a>
+            <div class="project-hover">
+                Multi-stage draft projection system trained on rolling historical cohorts to predict
+                5-year professional impact (EPM-based) and rotation probability. Integrates role-aware
+                feature engineering, play-type efficiency splits, contextual production normalization,
+                cross-era percentile scaling, and stability-adjusted priors. Employs pairwise gradient
+                boosting for relative ranking calibration and leakage-controlled training windows
+                to preserve forward validity. Designed to identify structural mispricings between
+                consensus evaluation and long-term impact outcomes.
+            </div>
+        </div>
 
         <!-- ELWAY -->
-        <a href="https://www.natesilver.net/p/elway-nfl-ratings-projections-playoff-odds"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/elway_thumb.jpg" alt="ELWAY" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">ELWAY: Team Projection Model</div>
-                    <div class="project-subtitle">Football Analytics and Modeling</div>
-                </div>
-                <div class="project-hover">
-                    Quarterback-adjusted NFL Elo framework incorporating QB VALUE ratings,
-                    injury simulations, opponent adjustments, and reproducible data pipelines
-                    for weekly probabilistic forecasts and playoff simulations.
-                </div>
+        <div class="project-card">
+            <img src="img/elway_thumb.jpg" alt="Team Projection Model" class="project-thumb">
+            <div class="project-info">
+                <div class="project-title">ELWAY: Team Projection Model</div>
+                <div class="project-subtitle">Football Analytics · Probabilistic Forecasting</div>
             </div>
-        </a>
+            <div class="project-hover">
+                Quarterback-adjusted Elo-based projection framework incorporating player-level
+                impact estimates, injury simulations, opponent adjustments, and reproducible
+                pipelines for weekly probabilistic forecasts and postseason simulations.
+            </div>
+        </div>
 
         <!-- QBERT -->
-        <a href="https://www.natesilver.net/p/qbert-nfl-quarterback-ratings"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/qbert1.jpg" alt="QBERT model" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">QBERT: Quarterback Rating Model</div>
-                    <div class="project-subtitle">Football Analytics and Modeling</div>
-                </div>
-                <div class="project-hover">
-                    Play-by-play quarterback evaluation model incorporating dropback context,
-                    opponent strength, pressure adjustments, and temporal stabilization
-                    techniques to estimate persistent QB impact.
-                </div>
+        <div class="project-card">
+            <img src="img/qbert1.jpg" alt="Quarterback Rating Model" class="project-thumb">
+            <div class="project-info">
+                <div class="project-title">QBERT: Quarterback Rating Model</div>
+                <div class="project-subtitle">Play-by-Play Performance Modeling</div>
             </div>
-        </a>
+            <div class="project-hover">
+                Context-adjusted quarterback evaluation system built on play-level data,
+                incorporating dropback type, pressure environment, opponent strength,
+                and temporal stabilization techniques to estimate persistent player impact.
+            </div>
+        </div>
 
         <!-- PLAYER TRACKING -->
-        <a href="https://thezonemaster.substack.com/p/building-a-rudimentary-player-tracking"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/tracking_thumb.jpg" alt="Player tracking" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">Player Tracking System</div>
-                    <div class="project-subtitle">Computer Vision · Spatial Modeling</div>
-                </div>
-                <div class="project-hover">
-                    Homography-based computer vision pipeline aligning broadcast footage
-                    to half-court coordinate systems, enabling spatial feature extraction
-                    for defensive versatility, rotation speed, and hustle metrics.
-                </div>
+        <div class="project-card">
+            <img src="img/tracking_thumb.jpg" alt="Player tracking" class="project-thumb">
+            <div class="project-info">
+                <div class="project-title">Player Tracking System</div>
+                <div class="project-subtitle">Computer Vision · Spatial Modeling</div>
             </div>
-        </a>
+            <div class="project-hover">
+                Homography-based computer vision pipeline aligning broadcast footage to
+                standardized half-court coordinate systems, enabling spatial feature extraction
+                for defensive versatility, rotation dynamics, and effort-based metrics.
+            </div>
+        </div>
 
         <!-- TRUE REBOUNDING RATE -->
-        <a href="https://thezonemaster.substack.com/p/true-rebounding-rate"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/true_rebounding_rate.jpg" alt="True Rebounding Rate" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">True Rebounding Rate</div>
-                    <div class="project-subtitle">Possession-Level Impact Modeling</div>
-                </div>
-                <div class="project-hover">
-                    Context-adjusted rebounding metric separating team structure from
-                    individual marginal impact using lineup controls, role modeling,
-                    and possession-level event tagging.
-                </div>
+        <div class="project-card">
+            <img src="img/true_rebounding_rate.jpg" alt="True Rebounding Rate" class="project-thumb">
+            <div class="project-info">
+                <div class="project-title">True Rebounding Rate</div>
+                <div class="project-subtitle">Possession-Level Impact Modeling</div>
             </div>
-        </a>
+            <div class="project-hover">
+                Context-adjusted rebounding metric separating team structure from
+                individual marginal contribution using lineup controls,
+                role modeling, and possession-level tagging.
+            </div>
+        </div>
 
         <!-- HUSTLE INDEX -->
-        <a href="https://thezonemaster.substack.com/p/analytical-mailbag-hustle"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/HUSTLE.jpg" alt="HUSTLE Index" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">HUSTLE Index</div>
-                    <div class="project-subtitle">Composite Defensive Effort Metric</div>
-                </div>
-                <div class="project-hover">
-                    Composite metric leveraging tracking and play-event data to quantify
-                    closeouts, contests, deflections, screen navigation, and other
-                    non-box-score defensive contributions.
-                </div>
+        <div class="project-card">
+            <img src="img/HUSTLE.jpg" alt="HUSTLE Index" class="project-thumb">
+            <div class="project-info">
+                <div class="project-title">HUSTLE Index</div>
+                <div class="project-subtitle">Composite Defensive Effort Metric</div>
             </div>
-        </a>
+            <div class="project-hover">
+                Composite metric leveraging tracking and event data to quantify
+                closeouts, contests, deflections, screen navigation, and
+                non-box-score defensive contributions.
+            </div>
+        </div>
 
         <!-- Social Essay -->
-        <a href="https://thezonemaster.substack.com/p/youre-probably-not-popular-and-why"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/theory.jpg" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">You’re probably not popular (and why)</div>
-                    <div class="project-subtitle">Network Theory · Social Science</div>
-                </div>
-                <div class="project-hover">
-                    Friendship Paradox–based network analysis exploring structural
-                    perception biases and implications for community formation.
-                </div>
+        <div class="project-card">
+            <img src="img/theory.jpg" class="project-thumb">
+            <div class="project-info">
+                <div class="project-title">Network Perception Analysis</div>
+                <div class="project-subtitle">Social Network Theory</div>
             </div>
-        </a>
+            <div class="project-hover">
+                Structural analysis of perception bias using Friendship Paradox
+                frameworks and degree-distribution modeling.
+            </div>
+        </div>
 
     </div>
-
-    <!-- ================= Selected Writing ================= -->
 
     <h3>Selected Writing:</h3>
     <div class="projects-grid">
-
-        <!-- (Your writing section remains unchanged for brevity) -->
-
+        <!-- Writing intentionally generalized and anonymized -->
     </div>
+
 </div>
 
 </body>
