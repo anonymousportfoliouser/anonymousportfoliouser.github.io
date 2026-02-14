@@ -59,38 +59,46 @@
         </div>
 
         <!-- ELWAY -->
+                <!-- ELWAY -->
         <div class="project-card">
             <img src="img/elway_thumb.jpg" alt="Team Projection Model" class="project-thumb">
             <div class="project-info">
                 <div class="project-title">ELWAY: Team Projection Model</div>
-                <div class="project-subtitle">Football Analytics · Bayesian Elo Extension</div>
+                <div class="project-subtitle">Football Analytics · Bayesian Elo Decomposition</div>
             </div>
             <div class="project-hover">
-                Hierarchical team rating model extending classical Elo by decomposing team strength
-                into quarterback-dependent and non-quarterback components. Incorporates play-level
-                QB VALUE estimates, injury-state transition probabilities, and opponent-adjusted
-                priors. Weekly rating updates performed via logistic win-probability likelihood
-                with dynamic K-factors scaled by matchup uncertainty. Monte Carlo simulation layer
-                generates season forecasts and playoff probability distributions across 50,000+ runs.
+                Bayesian extension of classical Elo that decomposes team strength into
+                quarterback-driven and non-quarterback components. Weekly ratings are updated
+                using a logistic win-probability likelihood with dynamic K-factors scaled by
+                pregame uncertainty and margin-of-victory adjustments. Quarterback value
+                inputs are derived from play-level impact estimates and replacement baselines,
+                with injury-state transitions explicitly modeled to substitute backup-level
+                expectations. Season forecasts and playoff odds are generated via large-scale
+                Monte Carlo simulation incorporating schedule structure, reseeding rules,
+                and probabilistic injury persistence.
             </div>
         </div>
+
 
         <!-- QBERT -->
         <div class="project-card">
             <img src="img/qbert1.jpg" alt="Quarterback Rating Model" class="project-thumb">
             <div class="project-info">
                 <div class="project-title">QBERT: Quarterback Rating Model</div>
-                <div class="project-subtitle">Play-by-Play Expected Value Modeling</div>
+                <div class="project-subtitle">Play-Level Impact & Era-Adjusted Evaluation</div>
             </div>
             <div class="project-hover">
-                Play-level expected points added (EPA) framework estimating quarterback-specific
-                marginal contribution after controlling for down-distance state, pressure rate,
-                receiver separation proxies, and opponent defensive efficiency. Uses ridge-
-                regularized regression for stability across low-volume passers and time-decayed
-                weighting to emphasize recent signal. Produces posterior-adjusted QB impact
-                distributions rather than single-point estimates.
+                Play-by-play expected points framework estimating quarterback-specific
+                marginal contribution above replacement after controlling for down-distance
+                state, game situation leverage, opponent defensive efficiency, and era-based
+                scoring environment. Applies ridge regularization for stability across
+                low-volume passers and Bayesian shrinkage toward prior performance to
+                mitigate small-sample volatility. Outputs posterior-adjusted QB impact
+                distributions used for cross-era comparisons and integration into team-level
+                forecast models.
             </div>
         </div>
+
 
         <!-- PLAYER TRACKING -->
         <div class="project-card">
