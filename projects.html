@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Projects — Joseph George</title>
+    <title>Projects</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous"
         referrerpolicy="no-referrer">
 </head>
@@ -17,13 +16,9 @@
 <header>
     <div class="nav">
         <div class="nav-left">
-            <a href="index.html" class="site-title">Joseph George</a>
+            <a href="index.html" class="site-title">Portfolio</a>
 
-            <a href="https://github.com/josephageorge"
-               target="_blank" rel="noopener noreferrer"
-               class="nav-icon" aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
-            </a>
+            <!-- Removed GitHub link for anonymity -->
         </div>
 
         <div class="nav-links">
@@ -36,303 +31,115 @@
 <div class="container">
     <h2>Projects and Writing</h2>
 
-    <!-- ================= Models & Tools ================= -->
-
     <h3>Selected Projects:</h3>
     <div class="projects-grid">
 
-        <!-- ELWAY -->
-        <a href="https://www.natesilver.net/p/elway-nfl-ratings-projections-playoff-odds"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/elway_thumb.jpg" alt="ELWAY" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">ELWAY: Team Projection Model</div>
-                    <div class="project-subtitle">Silver Bulletin · Football Analytics and Modeling</div>
-                </div>
-                <div class="project-hover">
-                    Quarterback-adjusted NFL Elo system rebuilt for Silver Bulletin, incorporating QB VALUE ratings,
-                    injury simulations, and reproducible pipelines for weekly forecasts.
-                </div>
+                <!-- PRISM -->
+        <div class="project-card">
+            <img src="img/prism_thumb.jpg" alt="PRISM Prospect Model" class="project-thumb">
+            <div class="project-info">
+                <div class="project-title">PRISM: Prospect Role Identification & Scouting Model</div>
+                <div class="project-subtitle">Basketball Analytics · Multi-Stage Predictive System</div>
             </div>
-        </a>
+            <div class="project-hover">
+                Multi-stage draft projection architecture trained on rolling historical cohorts to predict
+                5-year professional impact (EPM-based) and rotation probability. Integrates role-aware feature
+                engineering, play-type efficiency splits, contextual production normalization, and percentile-based
+                cross-era scaling. Uses pairwise gradient boosting for relative ranking calibration and
+                out-of-fold shrinkage priors to prevent information leakage. Designed to identify structural
+                mispricings between consensus evaluation and long-term impact outcomes.
+            </div>
+        </div>
 
-        <!-- QBERT -->
-        <a href="https://www.natesilver.net/p/qbert-nfl-quarterback-ratings"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/qbert1.jpg" alt="QBERT model" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">QBERT: Quarterback Rating Model</div>
-                    <div class="project-subtitle">Silver Bulletin · Football Analytics and Modeling</div>
-                </div>
-                <div class="project-hover">
-                    Quarterback performance model built on play-by-play data, incorporating dropback context,
-                    opponent strength, and stability adjustments to evaluate QB impact over time.
-                </div>
-            </div>
-        </a>
 
-        <!-- PLAYER TRACKING -->
-        <a href="https://thezonemaster.substack.com/p/building-a-rudimentary-player-tracking"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/tracking_thumb.jpg" alt="Player tracking" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">Player tracking system</div>
-                    <div class="project-subtitle">The Zone Master · Basketball Analytics and Modeling</div>
-                </div>
-                <div class="project-hover">
-                    Homography-based player tracking pipeline that aligns broadcast footage with court coordinates,
-                    enabling spatial analysis for defensive versatility and hustle metrics.
-                </div>
+        <!-- Generic Project Card Template -->
+        <div class="project-card">
+            <img src="img/project_thumb.jpg" alt="Project" class="project-thumb">
+            <div class="project-info">
+                <div class="project-title">Team Projection Model</div>
+                <div class="project-subtitle">Sports Analytics</div>
             </div>
-        </a>
+            <div class="project-hover">
+                Probabilistic forecasting system incorporating contextual adjustments,
+                injury simulations, and reproducible data pipelines.
+            </div>
+        </div>
 
-        <!-- TRUE REBOUNDING RATE -->
-        <a href="https://thezonemaster.substack.com/p/true-rebounding-rate"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/true_rebounding_rate.jpg" alt="True Rebounding Rate" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">True Rebounding Rate</div>
-                    <div class="project-subtitle">The Zone Master · Basketball Analytics and Modeling</div>
-                </div>
-                <div class="project-hover">
-                    A possession-level rebounding metric that separates team context from individual impact, accounting
-                    for role, box-outs, and lineup effects instead of just raw rebound totals.
-                </div>
+        <div class="project-card">
+            <img src="img/project_thumb2.jpg" alt="Project" class="project-thumb">
+            <div class="project-info">
+                <div class="project-title">Quarterback Rating Model</div>
+                <div class="project-subtitle">Performance Modeling</div>
             </div>
-        </a>
+            <div class="project-hover">
+                Play-by-play performance model incorporating context, opponent strength,
+                and stability adjustments over time.
+            </div>
+        </div>
 
-        <!-- HUSTLE INDEX -->
-        <a href="https://thezonemaster.substack.com/p/analytical-mailbag-hustle"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/HUSTLE.jpg" alt="HUSTLE Index" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">HUSTLE index</div>
-                    <div class="project-subtitle">The Zone Master · Basketball Analytics and Modeling</div>
-                </div>
-                <div class="project-hover">
-                    Composite effort metric that uses tracking and event data to capture closeouts, contests,
-                    deflections, dives, and other non-box-score actions that shape defensive impact.
-                </div>
+        <div class="project-card">
+            <img src="img/project_thumb3.jpg" alt="Project" class="project-thumb">
+            <div class="project-info">
+                <div class="project-title">Player Tracking System</div>
+                <div class="project-subtitle">Computer Vision · Spatial Modeling</div>
             </div>
-        </a>
+            <div class="project-hover">
+                Homography-based pipeline aligning broadcast footage with spatial coordinates
+                for advanced positional analytics.
+            </div>
+        </div>
 
-        <!-- You’re probably not popular -->
-        <a href="https://thezonemaster.substack.com/p/youre-probably-not-popular-and-why"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/theory.jpg" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">You’re probably not popular (and why)</div>
-                    <div class="project-subtitle">The Zone Master · Social Sciences</div>
-                </div>
-                <div class="project-hover">
-                    A social-network and Friendship Paradox–inspired essay on why most people feel less popular than
-                    their peers, and what that implies for how communities form.
-                </div>
+        <div class="project-card">
+            <img src="img/project_thumb4.jpg" alt="Project" class="project-thumb">
+            <div class="project-info">
+                <div class="project-title">Rebounding Impact Metric</div>
+                <div class="project-subtitle">Possession-Level Modeling</div>
             </div>
-        </a>
+            <div class="project-hover">
+                Context-adjusted rebounding metric separating team structure from
+                individual impact.
+            </div>
+        </div>
 
     </div>
-
-    <!-- ================= Selected Writing ================= -->
 
     <h3>Selected Writing:</h3>
     <div class="projects-grid">
 
-        <!-- Can Wemby make the MVP leap? -->
-        <a href="https://www.natesilver.net/p/can-wemby-make-the-mvp-leap"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/wemby.jpg" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">Can Wemby make the MVP leap?</div>
-                    <div class="project-subtitle">Silver Bulletin · NBA · 2025</div>
-                </div>
-                <div class="project-hover">
-                    Uses historical third-year comps, shot profile changes, team context, and Shot Quality RAPM to gauge whether Victor
-                    Wembanyama can jump directly into the heart of the MVP race.
-                </div>
+        <div class="project-card">
+            <img src="img/writing1.jpg" class="project-thumb">
+            <div class="project-info">
+                <div class="project-title">MVP Leap Analysis</div>
+                <div class="project-subtitle">NBA Analytics · 2025</div>
             </div>
-        </a>
+            <div class="project-hover">
+                Historical comps, shot profile changes, and context-driven modeling
+                to evaluate breakout probability.
+            </div>
+        </div>
 
-        <!-- Keep Houston weird -->
-        <a href="https://www.natesilver.net/p/keep-houston-weird"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/houston.jpg" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">Keep Houston weird</div>
-                    <div class="project-subtitle">Silver Bulletin · NBA · 2025</div>
-                </div>
-                <div class="project-hover">
-                    On how the Rockets’ strange mix of offensive rebounding, jumbo lineups, and spacing turned a quirky,
-                    experimental roster into a serious contender.
-                </div>
+        <div class="project-card">
+            <img src="img/writing2.jpg" class="project-thumb">
+            <div class="project-info">
+                <div class="project-title">Modern Roster Construction</div>
+                <div class="project-subtitle">Basketball Theory</div>
             </div>
-        </a>
+            <div class="project-hover">
+                Analysis of lineup experimentation, spacing dynamics,
+                and offensive rebounding investment.
+            </div>
+        </div>
 
-        <!-- 2026 draft notes vol. 1 -->
-        <a href="https://thezonemaster.substack.com/p/2026-nba-draft-notes-vol-1-the-big"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/vol1.jpg" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">2026 NBA Draft notes, Vol. 1: the big three</div>
-                    <div class="project-subtitle">The Zone Master · NBA Draft</div>
-                </div>
-                <div class="project-hover">
-                    Kicks off the 2026 draft cycle with deep dives on the three early headliners of the class, blending
-                    film, role projections, and statistical indicators.
-                </div>
+        <div class="project-card">
+            <img src="img/writing3.jpg" class="project-thumb">
+            <div class="project-info">
+                <div class="project-title">Draft Evaluation Notes</div>
+                <div class="project-subtitle">Prospect Modeling</div>
             </div>
-        </a>
-
-        <!-- Ace Bailey processing -->
-        <a href="https://thezonemaster.substack.com/p/ace-bailey-and-how-to-assess-processing"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/acebailey.jpg" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">Ace Bailey and how to assess processing</div>
-                    <div class="project-subtitle">The Zone Master · NBA Draft</div>
-                </div>
-                <div class="project-hover">
-                    Uses Ace Bailey as a case study for what “processing speed” actually means on the floor and how to
-                    separate aesthetic flair from real decision-making.
-                </div>
+            <div class="project-hover">
+                Blends film study with statistical indicators and role projections.
             </div>
-        </a>
-
-        <!-- Cooper Flagg -->
-        <a href="https://thezonemaster.substack.com/p/so-what-is-cooper-flagg"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/cooperflagg.jpg" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">So what is Cooper Flagg?</div>
-                    <div class="project-subtitle">The Zone Master · NBA Draft</div>
-                </div>
-                <div class="project-hover">
-                    Profiles Cooper Flagg’s two-way ceiling, detailing his defensive range, shooting trajectory, and how
-                    teams should think about building around his archetype.
-                </div>
-            </div>
-        </a>
-
-        <!-- Derik Queen & Danny Wolf -->
-        <a href="https://thezonemaster.substack.com/p/derik-queen-danny-wolf-and-the-modern"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/derikqueen.png" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">Derik Queen, Danny Wolf, and the modern big</div>
-                    <div class="project-subtitle">The Zone Master · NBA Draft</div>
-                </div>
-                <div class="project-hover">
-                    Examines how skilled, less traditional bigs like Derik Queen and Danny Wolf fit into modern
-                    defensive schemes and spacing-constrained offenses.
-                </div>
-            </div>
-        </a>
-
-        <!-- Rebounding thresholds -->
-        <a href="https://thezonemaster.substack.com/p/rebounding-thresholds-offensive-investment"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/reboundingtheory.png" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">Rebounding thresholds &amp; offensive investment</div>
-                    <div class="project-subtitle">The Zone Master · Basketball Theory</div>
-                </div>
-                <div class="project-hover">
-                    Uses lineup data to study when it’s worth sending extra bodies to the offensive glass and when those
-                    resources are better spent on transition defense.
-                </div>
-            </div>
-        </a>
-
-        <!-- Principles, LaMelo, and sports -->
-        <a href="https://thezonemaster.substack.com/p/principles-lamelo-ball-and-sports"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/lameloball.jpg" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">Principles: LaMelo Ball and Sports Clichés </div>
-                    <div class="project-subtitle">The Zone Master · Basketball Theory</div>
-                </div>
-                <div class="project-hover">
-                    A more philosophical piece about how principles, not just rules, guide decision-making in basketball,
-                    using LaMelo Ball as a lens on creativity and structure.
-                </div>
-            </div>
-        </a>
-
-        <!-- Paolo plus-minus -->
-        <a href="https://thezonemaster.substack.com/p/analytical-mailbag-paolos-plusminus"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/paolo.jpg" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">Analytical mailbag: Paolo’s plus-minus</div>
-                    <div class="project-subtitle">The Zone Master · Basketball Theory</div>
-                </div>
-                <div class="project-hover">
-                    Digs into why Paolo Banchero’s on/off numbers look the way they do, and what lineup context and
-                    defensive infrastructure mean for star-led offenses.
-                </div>
-            </div>
-        </a>
-
-        <!-- Amir Johnson piece -->
-        <a href="https://thezonemaster.substack.com/p/analytical-thinking-amir-johnson"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/amirjohnson.jpg" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">Analytical Thinking and Amir Johnson</div>
-                    <div class="project-subtitle">The Zone Master · Basketball Theory</div>
-                </div>
-                <div class="project-hover">
-                    A longform article on convenience, screening gravity, and much more. My favorite piece!
-                </div>
-            </div>
-        </a>
-
-        <!-- No-stats All-Star vs Barkley -->
-        <a href="https://thezonemaster.substack.com/p/the-no-stats-all-star-vs-charles"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/nostats.jpg" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">The “No-Stats All-Star” vs. Charles Barkley</div>
-                    <div class="project-subtitle">The Zone Master · Basketball Theory</div>
-                </div>
-                <div class="project-hover">
-                    Reflects on the Shane Battier discourse, Charles Barkley’s skepticism, and what the whole debate
-                    says about how analytics is (and isn’t) understood.
-                </div>
-            </div>
-        </a>
-
-        <!-- Rookie Contract Extension Model -->
-        <a href="https://thezonemaster.substack.com/p/a-statistical-approach-to-predicting"
-           target="_blank" style="text-decoration:none; color:inherit;">
-            <div class="project-card">
-                <img src="img/draft.jpg" alt="Rookie Contract Extension Model" class="project-thumb">
-                <div class="project-info">
-                    <div class="project-title">Rookie Contract Extension Model</div>
-                    <div class="project-subtitle">Basketball · 2025</div>
-                </div>
-                <div class="project-hover">
-                    Regression model that predicts rookie contract extension salary based on performance indicators.
-                </div>
-            </div>
-        </a>
+        </div>
 
     </div>
 </div>
