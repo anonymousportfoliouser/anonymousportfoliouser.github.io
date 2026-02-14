@@ -35,8 +35,6 @@
         and this page reflects a generalized technical overview without direct identifiers.
     </p>
 
-    <!-- ================= Models & Tools ================= -->
-
     <h3>Selected Projects:</h3>
     <div class="projects-grid">
 
@@ -48,13 +46,15 @@
                 <div class="project-subtitle">Basketball Analytics · Multi-Stage Predictive Architecture</div>
             </div>
             <div class="project-hover">
-                Multi-stage draft projection system trained on rolling historical cohorts to predict
-                5-year professional impact (EPM-based) and rotation probability. Integrates role-aware
-                feature engineering, play-type efficiency splits, contextual production normalization,
-                cross-era percentile scaling, and stability-adjusted priors. Employs pairwise gradient
-                boosting for relative ranking calibration and leakage-controlled training windows
-                to preserve forward validity. Designed to identify structural mispricings between
-                consensus evaluation and long-term impact outcomes.
+                Supervised projection framework trained on rolling 3-year draft cohorts to predict
+                5-year NBA Estimated Plus-Minus (EPM) and binary rotation outcomes. Feature set
+                includes possession-normalized box metrics, synergy play-type efficiency splits,
+                usage-adjusted assist/turnover ratios, stock rates, on/off RAPM derivatives,
+                and percentile-based cross-era scaling. Model stack combines isotonic calibration,
+                shrinkage priors for low-sample stabilization, and pairwise gradient boosting
+                (LambdaRank-style objective) to optimize ordinal ranking fidelity rather than
+                raw regression loss. All training windows are leakage-controlled with draft-year
+                cutoffs to preserve forward validity.
             </div>
         </div>
 
@@ -63,12 +63,15 @@
             <img src="img/elway_thumb.jpg" alt="Team Projection Model" class="project-thumb">
             <div class="project-info">
                 <div class="project-title">ELWAY: Team Projection Model</div>
-                <div class="project-subtitle">Football Analytics · Probabilistic Forecasting</div>
+                <div class="project-subtitle">Football Analytics · Bayesian Elo Extension</div>
             </div>
             <div class="project-hover">
-                Quarterback-adjusted Elo-based projection framework incorporating player-level
-                impact estimates, injury simulations, opponent adjustments, and reproducible
-                pipelines for weekly probabilistic forecasts and postseason simulations.
+                Hierarchical team rating model extending classical Elo by decomposing team strength
+                into quarterback-dependent and non-quarterback components. Incorporates play-level
+                QB VALUE estimates, injury-state transition probabilities, and opponent-adjusted
+                priors. Weekly rating updates performed via logistic win-probability likelihood
+                with dynamic K-factors scaled by matchup uncertainty. Monte Carlo simulation layer
+                generates season forecasts and playoff probability distributions across 50,000+ runs.
             </div>
         </div>
 
@@ -77,12 +80,15 @@
             <img src="img/qbert1.jpg" alt="Quarterback Rating Model" class="project-thumb">
             <div class="project-info">
                 <div class="project-title">QBERT: Quarterback Rating Model</div>
-                <div class="project-subtitle">Play-by-Play Performance Modeling</div>
+                <div class="project-subtitle">Play-by-Play Expected Value Modeling</div>
             </div>
             <div class="project-hover">
-                Context-adjusted quarterback evaluation system built on play-level data,
-                incorporating dropback type, pressure environment, opponent strength,
-                and temporal stabilization techniques to estimate persistent player impact.
+                Play-level expected points added (EPA) framework estimating quarterback-specific
+                marginal contribution after controlling for down-distance state, pressure rate,
+                receiver separation proxies, and opponent defensive efficiency. Uses ridge-
+                regularized regression for stability across low-volume passers and time-decayed
+                weighting to emphasize recent signal. Produces posterior-adjusted QB impact
+                distributions rather than single-point estimates.
             </div>
         </div>
 
@@ -91,12 +97,15 @@
             <img src="img/tracking_thumb.jpg" alt="Player tracking" class="project-thumb">
             <div class="project-info">
                 <div class="project-title">Player Tracking System</div>
-                <div class="project-subtitle">Computer Vision · Spatial Modeling</div>
+                <div class="project-subtitle">Computer Vision · Spatial Feature Extraction</div>
             </div>
             <div class="project-hover">
-                Homography-based computer vision pipeline aligning broadcast footage to
-                standardized half-court coordinate systems, enabling spatial feature extraction
-                for defensive versatility, rotation dynamics, and effort-based metrics.
+                Homography-based transformation pipeline mapping broadcast camera frames to
+                canonical half-court coordinates. Utilizes OpenCV feature detection for court-line
+                keypoints, RANSAC-based matrix estimation for perspective correction, and frame-
+                level object detection to extract player centroids. Outputs spatiotemporal
+                trajectories used to compute closeout velocity, help rotation timing, contest
+                distance, and possession-level spatial entropy metrics.
             </div>
         </div>
 
@@ -105,12 +114,14 @@
             <img src="img/true_rebounding_rate.jpg" alt="True Rebounding Rate" class="project-thumb">
             <div class="project-info">
                 <div class="project-title">True Rebounding Rate</div>
-                <div class="project-subtitle">Possession-Level Impact Modeling</div>
+                <div class="project-subtitle">Lineup-Adjusted Impact Metric</div>
             </div>
             <div class="project-hover">
-                Context-adjusted rebounding metric separating team structure from
-                individual marginal contribution using lineup controls,
-                role modeling, and possession-level tagging.
+                Possession-level rebounding attribution model separating individual rebound
+                probability from team scheme effects. Uses logistic regression conditioned on
+                shot location, rebound distance, lineup height distribution, and box-out
+                assignment proxies. Produces marginal rebound probability above expected,
+                normalized per 100 opportunities and adjusted for teammate contest density.
             </div>
         </div>
 
@@ -119,25 +130,30 @@
             <img src="img/HUSTLE.jpg" alt="HUSTLE Index" class="project-thumb">
             <div class="project-info">
                 <div class="project-title">HUSTLE Index</div>
-                <div class="project-subtitle">Composite Defensive Effort Metric</div>
+                <div class="project-subtitle">Composite Defensive Activity Model</div>
             </div>
             <div class="project-hover">
-                Composite metric leveraging tracking and event data to quantify
-                closeouts, contests, deflections, screen navigation, and
-                non-box-score defensive contributions.
+                Composite z-score aggregation of off-ball defensive actions including closeout
+                distance reduction, deflection rate per defensive possession, loose-ball recovery
+                probability, screen navigation efficiency, and help rotation latency. Features are
+                standardized within role clusters and weighted via principal component loadings
+                to capture shared variance across high-effort defensive behaviors.
             </div>
         </div>
 
-        <!-- Social Essay -->
+        <!-- Network Analysis -->
         <div class="project-card">
             <img src="img/theory.jpg" class="project-thumb">
             <div class="project-info">
                 <div class="project-title">Network Perception Analysis</div>
-                <div class="project-subtitle">Social Network Theory</div>
+                <div class="project-subtitle">Graph Theory · Degree Distribution Modeling</div>
             </div>
             <div class="project-hover">
-                Structural analysis of perception bias using Friendship Paradox
-                frameworks and degree-distribution modeling.
+                Analytical study of the Friendship Paradox using synthetic and empirical network
+                simulations. Models node degree distributions under preferential attachment and
+                random graph processes to quantify perception bias magnitude as a function of
+                variance in degree centrality. Includes Monte Carlo validation and closed-form
+                expectation derivations.
             </div>
         </div>
 
