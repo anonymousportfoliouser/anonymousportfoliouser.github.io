@@ -638,23 +638,30 @@ h3 {
 
 .project-card {
     position: relative;
-    overflow: hidden;
     border-radius: 18px;
+    overflow: hidden;
 }
 
 .project-hover {
     position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.92);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;              /* THIS IS CRITICAL */
+    background: rgba(0, 0, 0, 0.94);
     color: white;
     padding: 20px;
+    box-sizing: border-box;
+
     font-size: 0.85rem;
     line-height: 1.4;
-    overflow-y: auto;
+
+    overflow-y: auto;          /* enables scroll */
+    -webkit-overflow-scrolling: touch;
 
     opacity: 0;
     transform: translateY(100%);
-    transition: all 0.35s ease;
+    transition: transform 0.35s ease, opacity 0.35s ease;
 }
 
 .project-card:hover .project-hover {
