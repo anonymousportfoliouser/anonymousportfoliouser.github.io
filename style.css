@@ -636,3 +636,30 @@ h3 {
     text-align: center;
 }
 
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.project-hover {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    color: white;
+    padding: 20px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    overflow-y: auto;
+
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.35s ease;
+}
+
+.project-card:hover .project-hover {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
